@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PanoHK360: a city-scale 8K urban panoramic RGB-D dataset and benchmark for depth estimation. NeurIPS 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PanoHK360: A Large-Scale 8K Urban Panoramic Dataset and Benchmark for Depth Estimation">
+  <meta property="og:description" content="Approximately 2 million 8K panoramas with survey-grade LiDAR depth across Hong Kong. NeurIPS 2026.">
+  <meta property="og:url" content="https://szucyx.github.io/PanoHK360/">
+  <meta property="og:image" content="https://szucyx.github.io/PanoHK360/assets/images/teaser.webp">
+  <link rel="canonical" href="https://szucyx.github.io/PanoHK360/">
+  <title>PanoHK360: A Large-Scale 8K Urban Panoramic Dataset and Benchmark for Depth Estimation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.config.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="header-content">
+        <h1>PanoHK360: A Large-Scale 8K Urban Panoramic Dataset and Benchmark for Depth Estimation</h1>
+        <p class="venue">NeurIPS 2026</p>
+        <p class="authors">yunxiaochen</p>
+        <p class="affiliation" hidden></p>
+        <nav class="paper-links" aria-label="Paper resources">
+          <a class="link-btn" data-resource="paper" href="assets/paper/PanoHK360.pdf" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+            Paper
+          </a>
+          <button class="link-btn" data-resource="code" type="button" disabled title="Code link will be added later">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.82c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.71 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.29-5.12-1.25-5.12-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.16A10.67 10.67 0 0 1 12 6.12c.95 0 1.9.13 2.79.38 2.14-1.46 3.08-1.16 3.08-1.16.62 1.55.23 2.69.12 2.98.72.79 1.15 1.79 1.15 3.02 0 4.32-2.63 5.26-5.14 5.54.4.35.76 1.04.76 2.09v3.11c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg>
+            Code
+          </button>
+          <button class="link-btn" data-resource="dataset" type="button" disabled title="Dataset link will be added later">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+            Dataset
+          </button>
+          <a class="link-btn" data-resource="video" href="assets/video/PanoHK360.mp4" target="_blank" rel="noopener noreferrer" title="Watch the PanoHK360 video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></svg>
+            Video
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="system-overview-wrapper" tabindex="0" role="region" aria-label="Dataset overview figure. Scroll horizontally to see all scenes.">
+      <img src="assets/images/teaser.webp" alt="Four PanoHK360 urban scenes: a sunny market street, an overcast coastal road, a sunny urban park, and a nighttime urban canyon. Each column shows the RGB panorama, LiDAR depth, surface normals, and close-up details." class="system-overview" width="3000" height="1479" fetchpriority="high">
+    </div>
+    <p class="figure-hint">Swipe or Shift + scroll to pan the figure horizontally</p>
+    <p class="figure-caption">8K panoramic RGB, survey-grade LiDAR depth, and surface normals across diverse urban scenes and illumination conditions.</p>
+  </header>
+  <main>
+    <div class="content-stack">
+      <section class="abstract" aria-labelledby="abstract-title">
+        <h2 id="abstract-title">Abstract</h2>
+        <p>Panoramic 360° depth estimation underpins autonomous navigation, 3D scene reconstruction, and scene understanding. However, existing outdoor panoramic datasets remain limited in three aspects. Small-scale collections are insufficient for modern data-hungry architectures and tend to produce models that generalize poorly across cities. Synthetic datasets transfer poorly to real scenes due to persistent domain gaps in illumination, geometry, and material appearance. Pseudo-label datasets distilled from pretrained estimators inherit the errors of the teacher model. Their downstream accuracy is therefore capped at the performance ceiling of the teacher itself. To address these issues, we present PanoHK360, a city-scale outdoor panoramic RGB-D dataset of diverse urban scenes in Hong Kong. The data are collected by a vehicle-mounted rig that pairs 8K panoramic imaging with survey-grade LiDAR. To the best of our knowledge, PanoHK360 is the first panoramic depth dataset that simultaneously combines three defining properties: city-scale geographic coverage, 8K equirectangular resolution, and sensor-based metric depth. The depth is recovered directly from LiDAR rather than estimated by a pretrained network. The release further includes raw point clouds, 6-DoF camera poses, and temporal capture sequences. We further benchmark representative monocular 360° depth methods on PanoHK360 under a unified protocol with a location-disjoint training and validation split. The results reveal a substantial gap between current methods and the level of resolution and scene diversity required for real-world urban deployment. These findings establish PanoHK360 as a challenging testbed for future research.</p>
+      </section>
+      <section class="video-embed video-player" id="video" aria-label="PanoHK360 panoramic RGB and depth video">
+        <video id="project-video" controls playsinline preload="metadata" poster="assets/images/video-poster.webp" width="3840" height="1920">
+          <source src="assets/video/PanoHK360.mp4" type="video/mp4">
+          Your browser does not support embedded video. <a href="assets/video/PanoHK360.mp4">Download the MP4 video</a>.
+        </video>
+      </section>
+      <section class="dataset" aria-labelledby="dataset-title">
+        <h2 id="dataset-title">Dataset</h2>
+        <p><strong>PanoHK360</strong> is a city-scale outdoor panoramic RGB-D dataset captured across diverse urban environments in Hong Kong. It pairs approximately <strong>2 million</strong> equirectangular RGB frames at <strong>8000 × 4000</strong> resolution with survey-grade LiDAR metric depth. The release further includes surface normals, raw point clouds, 6-DoF camera poses, and temporal capture sequences.</p>
+        <p><strong>PanoHK360-Mini</strong> is a curated benchmark of <strong>22,751 panoramic frames</strong>: 21,352 training frames and 1,399 validation frames. A location-disjoint split across ten geographically distinct locations tests generalization to unseen urban layouts and illumination conditions. Representative monocular 360° depth estimation methods are evaluated under a unified protocol.</p>
+        <figure class="dataset-figure">
+          <img src="assets/images/dataset-overview.webp" width="2400" height="1004" loading="lazy" alt="PanoHK360 acquisition routes across Hong Kong, with aligned RGB, surface normal and metric depth observations.">
+          <figcaption>Data acquisition trajectories across Hong Kong and geometrically aligned panoramic RGB, surface normals, and depth.</figcaption>
+        </figure>
+      </section>
+      <section class="citation" aria-labelledby="citation-title">
+        <div class="citation-heading">
+          <h2 id="citation-title">Citation and Attribution</h2>
+          <button class="copy-btn" id="copy-citation" type="button">Copy BibTeX</button>
+        </div>
+        <p>If you use this work or the dataset, please cite:</p>
+        <pre class="bibtex" id="bibtex">@inproceedings{panohk3602026,
+    author    = {yunxiaochen},
+    title     = {{PanoHK360}: A Large-Scale 8K Urban Panoramic Dataset and Benchmark for Depth Estimation},
+    booktitle = {Advances in Neural Information Processing Systems},
+    year      = {2026}
+}</pre>
+        <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+      </section>
+    </div>
+  </main>
+  <footer>Page layout adapted from <a href="https://odgs-slam.github.io/" target="_blank" rel="noopener noreferrer">ODGS-SLAM</a>.</footer>
+</body>
+</html>
