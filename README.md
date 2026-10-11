@@ -14,7 +14,7 @@ python3 serve.py
 
 ## 修改内容
 
-- `dist/site.config.js`：作者、机构、会议以及论文、代码、数据集和视频链接。空链接保留为灰色禁用按钮。
+- `dist/site.config.js`：作者、机构、会议及会议页面，以及论文、代码、数据集和视频链接。作者的 `corresponding: true` 用于标注通讯作者；空链接保留为灰色禁用按钮。
 - `dist/index.html`：论文标题、摘要、数据集介绍和 BibTeX。
 - `dist/styles.css`：样式，沿用参考页面的浅灰背景、居中标题、资源按钮和白色内容区。
 - `dist/assets/images/`：由论文 Figure1.pdf 和 Figure2.pdf 转换的网页配图。
@@ -22,7 +22,7 @@ python3 serve.py
 - `dist/assets/video/PanoHK360.mp4`：已压缩并接入主页的视频，3840×1920、30 fps、H.264，10 秒，约 16.2 MB。
 - `dist/assets/images/video-poster.webp`：从压缩视频第一帧提取的播放器封面。
 
-作者当前为 `yunxiaochen`，机构为空，代码和数据集没有外部链接。视频已接入，顶部 Video 按钮可直接打开 MP4。`main.pdf` 保留原稿内容，可在拿到 camera-ready PDF 后替换网页中的副本。
+作者依次为 Yunxiao Chen、Honghuan Lin、Ruisheng Wang、Yujun Liu、Kun Zhou、Shangfeng Huang 和 Tsz Nam Chan；Ruisheng Wang 标注为通讯作者，机构为空。NeurIPS 2026 链接到[会议论文页面](https://neurips.cc/virtual/2026/poster/139447)，Code 链接到[代码仓库](https://github.com/William1234i/PanoHK360)，Dataset 链接到[Hugging Face 数据集](https://huggingface.co/datasets/adadai3132/PanoHK360)。视频已接入，顶部 Video 按钮可直接打开 MP4。`main.pdf` 保留原稿内容，可在拿到 camera-ready PDF 后替换网页中的副本。
 
 视频保留原始 2:1 全景比例，不裁切，使用原生播放控件，支持全屏和手机内联播放。默认仅预加载元数据，不自动播放。MP4 使用 faststart，本地服务器支持 HTTP 字节范围请求，方便快速开始播放和拖动进度。
 
