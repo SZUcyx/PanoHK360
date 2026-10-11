@@ -4,7 +4,7 @@ window.PANOHK360_CONFIG = {
     { name: "Yunxiao Chen", url: "" },
     { name: "Honghuan Lin", url: "" },
     { name: "Ruisheng Wang", url: "https://ruishengwang.github.io/", corresponding: true },
-    { name: "Yujun Liu", url: "" },
+    { name: "Yujun Liu", url: "https://yjlcv.github.io/" },
     { name: "Kun Zhou", url: "https://redrock303.github.io/" },
     { name: "Shangfeng Huang", url: "" },
     { name: "Tsz Nam Chan", url: "" }
