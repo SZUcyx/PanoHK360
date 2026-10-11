@@ -14,7 +14,7 @@ body {
 
     .header-top {
       display: grid;
-      grid-template-columns: 220px minmax(0, 1fr) 220px;
+      grid-template-columns: 300px minmax(0, 1fr) 300px;
       align-items: start;
       gap: 1rem;
       padding: 1.25rem 1rem 0;
@@ -25,8 +25,8 @@ body {
     }
 
     .header-logo {
-      width: 220px;
-      height: 66px;
+      width: 300px;
+      height: 120px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -48,7 +48,7 @@ body {
     }
 
     .header-logo img {
-      height: 66px;
+      height: 120px;
       width: auto;
       max-width: 100%;
       object-fit: contain;
@@ -269,7 +269,7 @@ body {
       text-decoration: underline;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1280px) {
       .header-top {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         grid-template-rows: auto auto;
@@ -300,7 +300,7 @@ body {
     /* ── Responsive: mobile ── */
     @media (max-width: 768px) {
       .header-top {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) 80px;
         grid-template-rows: auto auto;
         justify-content: stretch;
         gap: 0.75rem;
@@ -310,8 +310,9 @@ body {
       .header-logo {
         grid-row: 1;
         justify-content: flex-start;
-        width: 140px;
-        height: 42px;
+        width: 100%;
+        max-width: 220px;
+        height: 80px;
       }
 
       .header-content {
@@ -320,10 +321,10 @@ body {
       }
 
       .header-logo img {
-        height: 42px;
+        height: 80px;
       }
 
-      .header-logo-right { justify-content: flex-end; }
+      .header-logo-right { width: 80px; justify-content: flex-end; }
 
       .authors {
         font-size: 1rem;
