@@ -127,9 +127,9 @@ body {
     }
 
     .system-overview {
-      max-width: 1654px;
+      max-width: 980px;
       width: 100%;
-      min-width: 1024px;
+      min-width: 900px;
       display: block;
       margin: 0 auto;
     }
