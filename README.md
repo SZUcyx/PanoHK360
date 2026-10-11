@@ -1,6 +1,6 @@
 # PanoHK360 论文主页
 
-按照 https://odgs-slam.github.io/ 的页面结构和样式制作，内容来自 `../PanoHK360写作/main.tex`。纯静态 HTML/CSS/JavaScript，无需安装 npm 依赖。
+PanoHK360 的 NeurIPS 2026 论文主页，包含论文介绍、作者、视频、代码及数据集入口。使用纯静态 HTML/CSS/JavaScript，无需安装 npm 依赖。
 
 ## 本地运行
 
@@ -16,7 +16,7 @@ python3 serve.py
 
 - `dist/site.config.js`：作者、机构、会议及会议页面，以及论文、代码、数据集和视频链接。作者的 `corresponding: true` 用于标注通讯作者；空链接保留为灰色禁用按钮。
 - `dist/index.html`：论文标题、摘要、数据集介绍和 BibTeX。
-- `dist/styles.css`：样式，沿用参考页面的浅灰背景、居中标题、资源按钮和白色内容区。
+- `dist/styles.css`：页面布局、字体、资源按钮和响应式样式。
 - `dist/assets/images/`：由论文 Figure1.pdf 和 Figure2.pdf 转换的网页配图。
 - `dist/assets/images/shenzhen-university-logo.png` 和 `neurips-logo.jpg`：用户提供的深圳大学和 NeurIPS 完整字标 Logo，分别显示在标题区左上角和右上角；手机上两者排在标题上方。
 - `dist/assets/paper/PanoHK360.pdf`：原有 main.pdf 的副本，Paper 按钮直接打开此文件。
@@ -39,6 +39,6 @@ Pages 成功部署后的主页地址为：https://szucyx.github.io/PanoHK360/
 
 图片、样式、脚本、论文和视频均使用相对路径，适用于 GitHub Pages 的项目子目录。仓库只包含主页文件、论文 PDF、压缩 MP4 和本地启动脚本；原始 AVI、作图 PPTX、完整素材文件夹及转码工具不纳入提交。
 
-## 页面来源
+## 致谢
 
-页面布局和样式参考 [ODGS-SLAM project page](https://odgs-slam.github.io/)，保留页脚来源署名；标题、作者、文字、图片、资源入口和引用均已替换为 PanoHK360 内容。
+主页设计借鉴了 [ODGS-SLAM](https://odgs-slam.github.io/)。
