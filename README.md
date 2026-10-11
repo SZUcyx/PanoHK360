@@ -18,7 +18,7 @@ python3 serve.py
 - `dist/index.html`：论文标题、摘要、数据集介绍和 BibTeX。
 - `dist/styles.css`：样式，沿用参考页面的浅灰背景、居中标题、资源按钮和白色内容区。
 - `dist/assets/images/`：由论文 Figure1.pdf 和 Figure2.pdf 转换的网页配图。
-- `dist/assets/images/shenzhen-university-logo.png` 和 `neurips-logo.svg`：用户提供的深圳大学和 NeurIPS Logo，分别显示在标题区左上角和右上角；手机上两者排在标题上方。
+- `dist/assets/images/shenzhen-university-logo.png` 和 `neurips-logo.jpg`：用户提供的深圳大学和 NeurIPS 完整字标 Logo，分别显示在标题区左上角和右上角；手机上两者排在标题上方。
 - `dist/assets/paper/PanoHK360.pdf`：原有 main.pdf 的副本，Paper 按钮直接打开此文件。
 - `dist/assets/video/PanoHK360.mp4`：已压缩并接入主页的视频，3840×1920、30 fps、H.264，10 秒，约 16.2 MB。
 - `dist/assets/images/video-poster.webp`：从压缩视频第一帧提取的播放器封面。

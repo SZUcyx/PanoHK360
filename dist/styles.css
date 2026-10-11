@@ -300,7 +300,7 @@ body {
     /* ── Responsive: mobile ── */
     @media (max-width: 768px) {
       .header-top {
-        grid-template-columns: minmax(0, 1fr) 80px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         grid-template-rows: auto auto;
         justify-content: stretch;
         gap: 0.75rem;
@@ -324,7 +324,7 @@ body {
         height: 80px;
       }
 
-      .header-logo-right { width: 80px; justify-content: flex-end; }
+      .header-logo-right { justify-content: flex-end; }
 
       .authors {
         font-size: 1rem;
