@@ -14,7 +14,7 @@ body {
 
     .header-top {
       display: grid;
-      grid-template-columns: 220px 1fr 220px;
+      grid-template-columns: 220px minmax(0, 1fr) 220px;
       align-items: start;
       gap: 1rem;
       padding: 1.25rem 1rem 0;
@@ -51,6 +51,8 @@ body {
       height: 66px;
       width: auto;
       max-width: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
     }
 
     .header-content {
@@ -267,6 +269,17 @@ body {
       text-decoration: underline;
     }
 
+    @media (max-width: 1100px) {
+      .header-top {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: auto auto;
+      }
+
+      .header-logo { grid-row: 1; }
+      .header-logo-right { justify-self: end; }
+      .header-content { grid-column: 1 / -1; grid-row: 2; }
+    }
+
     /* ── Responsive: tablet ── */
     @media (max-width: 1024px) {
       main {
@@ -287,16 +300,16 @@ body {
     /* ── Responsive: mobile ── */
     @media (max-width: 768px) {
       .header-top {
-        grid-template-columns: 140px 140px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         grid-template-rows: auto auto;
-        justify-content: center;
+        justify-content: stretch;
         gap: 0.75rem;
         padding: 1rem 1rem 0;
       }
 
       .header-logo {
         grid-row: 1;
-        justify-content: center;
+        justify-content: flex-start;
         width: 140px;
         height: 42px;
       }
@@ -309,6 +322,8 @@ body {
       .header-logo img {
         height: 42px;
       }
+
+      .header-logo-right { justify-content: flex-end; }
 
       .authors {
         font-size: 1rem;
@@ -347,7 +362,6 @@ body {
 
 /* PanoHK360: local content and accessible resource placeholders. */
 * { box-sizing: border-box; }
-.header-top { display: block; max-width: 1240px; }
 .header-content { width: 100%; }
 .system-overview { height: auto; }
 .authors { line-height: 1.6; }
@@ -357,6 +371,7 @@ body {
 .venue a { color: inherit; text-decoration: none; }
 .venue a:hover { color: #005eb8; text-decoration: underline; }
 .venue a:focus-visible { outline: 3px solid #005eb8; outline-offset: 3px; }
+.header-logo a:focus-visible { outline: 3px solid #005eb8; outline-offset: 3px; }
 .authors a { color: inherit; text-decoration: none; }
 .authors a:hover { color: #005eb8; text-decoration: underline; }
 .link-btn { font-family: inherit; line-height: 1.2; }
@@ -380,7 +395,7 @@ footer a { color: #777; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 @media (max-width: 768px) {
-  .header-top { display: block; padding: 1.25rem 1rem 0; }
+  .header-top { padding: 1.25rem 1rem 0; }
   h1 { font-size: clamp(1.5rem, 5vw, 2rem); }
   .system-overview { min-width: 900px; }
   .figure-hint { display: block; padding: 0 1rem; }
