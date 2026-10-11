@@ -3,7 +3,7 @@ window.PANOHK360_CONFIG = {
   authors: [
     { name: "Yunxiao Chen", url: "" },
     { name: "Honghuan Lin", url: "" },
-    { name: "Ruisheng Wang", url: "", corresponding: true },
+    { name: "Ruisheng Wang", url: "https://ruishengwang.github.io/", corresponding: true },
     { name: "Yujun Liu", url: "" },
     { name: "Kun Zhou", url: "" },
     { name: "Shangfeng Huang", url: "" },
